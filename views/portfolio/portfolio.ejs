@@ -1,0 +1,77 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/portfolio.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+</head>
+<body> 
+    <%- include('../includes/nav.ejs') %> 
+ 
+    <main class="display">
+     <div class="sub-nav">
+         <ul>
+             <li><a href="/portfolio">Balances</a></li>
+             <li><a href="/portfolio/transactions">Transaction History</a></li>
+         </ul>
+     </div>
+     
+     <div class="account-balance-container">
+         <div id="account-balance">
+             <ul>
+                <li><h3>Account Balance</h3></li>
+                <li><h1 id="accountBalance">$0.00</h1></li>
+
+             </ul> 
+            </div>
+            
+        <div id="add-coin">
+            <h3><a href="portfolio/coin-list">Add Coin</a></h3>
+        </div>
+     </div>   
+    <div class="coin-container">
+        
+        <table class="coin-table">
+            <tr>
+                <th id="coin-name">Coins</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Balance</th>
+                <th id="transact">Action</th>
+            </tr>
+        
+            <% for (let i = 0; i < user.portfolio.items.length; i++) { %>
+
+            <tr class="row-info">
+                <td id="coin-name">
+                    <h4><%= userCoin[i].abbreviation %></h4>
+                    <h3 id="coinName"><%= userCoin[i].name %></h3></td>
+                <td id="price">$
+                    
+                </td>
+                <td id="quantity"><%= (userCoin[i].quantity).toFixed(2) %></td>
+                <td id="balance">$
+                    
+                    </td>
+                <td id="transact">
+                    <div class="transact-btn-container">
+                    <div id="buy-sell-btn"><a href="/portfolio/action/<%= userCoin[i].coinId %>">Add/Remove</a>
+                    
+                    <!-- <div id="buy-sell-btn"><a href="/coin-list/add-coin/<%= userCoin[i].coinId %>">Add</a> -->
+                    
+                    <!-- </div><div id="buy-sell-btn"><a href="/coin-list/remove-coin/<%= userCoin[i].coinId %>">Remove</a></div> -->
+                    </div>
+                </td>
+            </tr>
+            <% } %>
+            
+            </table>
+
+            </div>
+ </main>
+ 
+     
+</div>
+<%- include('../includes/footer.ejs') %>
+</body>
+<script src="/js/fetch-portfolio-data.js"></script>
+</html>
+

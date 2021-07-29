@@ -1,0 +1,71 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/portfolio.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body> 
+    <%- include('../includes/nav.ejs') %> 
+ 
+    <main class="display">
+     <div class="sub-nav">
+         <ul>
+             <li><a href="/portfolio">Balances</a></li>
+             <li><a href="/portfolio/transactions">Transaction History</a></li>
+         </ul>
+     </div>
+     <div class="account-balance-container">
+         <div id="account-balance">
+             <ul>
+                <li><h3>Transactions</h3></li>
+                
+     </div>  
+     </div> 
+    <div class="coin-container">
+        
+        <table class="coin-table">
+            <tr>
+                <th id="coin-name">Coins</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Date</th>
+                
+            </tr>
+            <% let reverseArray = user.transactions.items.reverse() %>
+            <% for (let i = 0; i < reverseArray.length; i++) { %>
+
+            <tr class="row-info">
+                <td id="coin-name">
+                    <h3 id="coinName"><%= transactions[i].coinName %></h3></td>
+                <td>
+                   
+                    <% if (Math.sign(transactions[i].quantity) === -1) { %> 
+                        <h4 style="color: #d3d3d3">Sell</h4>
+                        <% } else { %>
+                        <h4>Buy</h4>
+                        <% } %>
+                </td>
+                <td id="price">$<%= transactions[i].price %>              
+                </td>
+                <td id="quantity"><%= (transactions[i].quantity).toFixed(2) %></td>
+                <td id="total">$<%= Math.abs(transactions[i].quantity * transactions[i].price).toFixed(2)  %></td>
+                <td id="date"><%= transactions[i].date.toString().slice(0,16) %>
+                    
+                    </td>
+                
+            </tr>
+            <% } %>
+            
+            </table>
+
+            </div>
+ </main>
+     
+</div>
+<%- include('../includes/footer.ejs') %>
+
+</body>
+<script src="/js/fetch-transactions.js"></script>
+
+</html>
+

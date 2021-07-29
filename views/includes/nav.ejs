@@ -1,0 +1,30 @@
+<div class="nav">
+    <div class="nav-content">
+    <div class="nav-prices">
+        <ul>
+            <!-- <li><h1>CryptKeeper</h1></li> -->
+            <li>Bitcoin &emsp; <h3 id="bitcoin-head-price">$</h3>&emsp;<h5 id="btcChangePercent">()</h5></li>
+            <li>Ethereum &emsp; <h3 id="ethereum-head-price">$</h3></h3>&emsp;<h5 id="ethChangePercent">()</h5></li>
+            <li><h5 id="ethChangePercent"></h5></li>
+            
+        </ul>
+    </div>
+    <div class="nav-links">
+        <ul>
+            <% if (!isAuthenticated) { %>
+            <li><a href="/">Home</a></li>
+            <% } else { %>
+                <li><a href="/portfolio">Portfolio</a></li>
+            <% } %>
+            <li><a href="/markets">Markets</a></li>
+            <% if (!isAuthenticated) { %>
+            <li><a href="/login">Login</a></li>
+            <% }  else { %>
+            <li>
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <a href="/log-out">Log Out</a></li>
+            <% } %>
+        </ul>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<% if(errorMessage) { %>
+    <div class="error"><%= errorMessage %></div>
+<% } %>
+<div class="center-btn">
+
+<input type="hidden" id="coinId" name="coinId" value="<%= coin._id %>"> 
+<input type="hidden" id="name" name="<%= coin.name %>" value="<%= coin.name %>">
+<input type="hidden" id="abbreviation" name="<%= coin.abbreviation %>" value="<%= coin.abbreviation %>">
+<div class="remove-coin-container">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    <button type="submit" id="submit" name="submit" class="btn">Remove Coin</button>
+    </div>
+</form>
+
+    
+</div>
+<div class="delete-coin">
+    <a href="/portfolio/delete-coin/<%= coin._id %>">Delete Coin from Portfolio</a>
+</div>
+

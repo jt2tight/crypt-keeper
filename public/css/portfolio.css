@@ -1,0 +1,317 @@
+
+body {
+    background-image: url('../images/blue-nebula.jpg');
+    background-repeat: no-repeat;
+    height: 110%;
+    position: relative;
+}
+
+.footer {
+    margin-bottom: -2.5%;
+}
+
+.account-balance-container {
+    background: rgba(0,0,0,0.5);
+    width: 70%;
+    text-align: center;
+    color: white;
+    margin: auto;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: .75rem;
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#account-balance {
+    display: flex;
+
+}
+
+#account-balance h3{
+    color: #2dc28e;
+
+}
+
+#account-balance ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 1rem 2rem;
+    
+}
+
+#account-balance li{
+    padding-left: 2rem;
+    justify-content: space-between;
+}
+
+#add-coin {
+    margin-right: 8%;
+    padding: .75rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    background-color: #2dc28e;
+}
+
+#add-coin:hover {
+    padding: .75rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    background-color: #2d73c2;
+}
+
+.coin-container {
+    background: rgba(0,0,0,0.85);
+    width: 70%;
+    text-align: center;
+    color: white;
+    margin: auto;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: .75rem;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.option-select {
+    margin-top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.coin-table{
+    margin: auto;
+    margin-top: 2%;
+    width: 95%;
+    border-collapse: collapse;
+    margin-bottom: 2%;
+    color: #cecece;
+}
+
+tr {
+    width: 100%;
+}
+
+td {
+    width: 15%;
+}
+
+th {
+    color: #2dc28e;
+}
+
+th, td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(161, 161, 161, 0.35);
+    vertical-align: middle;
+    align-items: center;
+    align-content: center;
+}
+
+.row-info:hover {
+    background-color: rgba(161, 161, 161, 0.15);
+    
+    
+}
+
+th:hover{
+    background-color: none;
+}
+
+#transact {
+    align-items: center;
+    /* padding-right: 2%; */
+    /* text-align: right; */
+    width: 15%;
+}
+
+.transact-btn-container {
+    margin: auto auto;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+#transact-btn {
+    width: 50%;
+    padding: 1rem .35rem;
+    background-color: #222222;
+    color: #2dc28e;
+    align-items: center;
+    text-align: center;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin: auto;
+    
+}
+
+#buy-sell-btn {
+    width: 50%;
+    padding: 1rem .5rem;
+    background-color: #222222;
+    color: #2dc28e;
+    align-items: center;
+    text-align: center;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#transact-btn:hover {
+    background-color: #2dc28e;
+    color: white;
+}
+
+#buy-sell-btn:hover {
+    background-color: #2dc28e;
+    color: white;
+}
+
+#coin-name{
+    text-align: left;
+    padding-left: 1%;
+    width: 10%;
+    
+}
+
+h4 {
+    color: #2dc28e;
+    font-size: 1rem;
+}
+
+h3 {
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px){
+
+.display {
+    margin-top: 15%;
+    min-height: 65vh;
+}
+.account-balance-container{
+    width: 95%;
+}
+
+.coin-container {
+    width: 95%;
+    font-size: 1rem;
+}
+
+.coin-container h3{
+    font-size: 1rem;
+
+}
+
+#add-coin {
+    margin-left: auto;
+    margin-right: 2.5%;
+}
+.portfolio-chart {
+    position: relative;
+    width: 70vw;
+    height: 20vh;
+}
+
+#buy-sell-btn {
+    width: auto;
+    padding: .65rem .25rem;
+    background-color: #222222;
+    color: #2dc28e;
+    align-items: center;
+    text-align: center;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    font-size: 1rem;
+    
+}
+
+}
+
+@media screen and (max-width: 500px){
+    .coin-container {
+        margin: auto;
+        font-size: .8rem; 
+        width: 100%; 
+        margin: auto;
+    }
+
+    .coin-container h3 {
+        font-size: .8rem;
+    }
+
+    .sub-nav {
+        width: 90%;
+        margin-right: auto;
+        padding: 0; 
+    }
+
+    .sub-nav ul {
+        padding: 0;
+        margin: 0;
+        margin: auto;
+        width: 100%; 
+        padding-bottom: 50px;
+        justify-content: space-between;
+        
+    }
+
+    .sub-nav ul li{
+        padding: 0;
+        margin: 0;
+        list-style-position: inside;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+    }
+
+    #buy-sell-btn{
+        font-size: .8rem;
+    }
+
+    #add-coin {
+        height: auto;
+        width: 80px;
+        padding: 10px 5px;
+        align-content: center;
+        margin: auto;
+    }
+
+    #add-coin h3 {
+        font-size: .8rem;
+    }
+
+    .account-balance-container {
+        width: 100%; 
+        border: none;
+        padding-bottom: 10px;
+    }
+
+    #account-balance {
+        width: 80%; 
+    }
+
+    #account-balance ul {
+        list-style-position: inside;
+        padding: 0;
+    }
+
+    #account-balance ul li {
+        text-align: center;
+        list-style-position: inside;
+        padding: 5px 15px;
+    }
+
+    .account-balance-container h3 {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,42 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/portfolio.css">
+<link rel="stylesheet" href="/css/add-coin.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body> 
+    <%- include('../includes/nav.ejs') %> 
+    <main class="display">
+        <div class="add-coin-container">
+            <div class="centered"><h1>Delete Coin</h1></div>
+
+            <div class="coin-add-info">
+            <form method="POST">
+            <div class="line-item-delete">
+                <p>Please confirm: delete <%= coin.name %> from portfolio.</p>
+                
+                <input type="hidden" name="name" value="<%= coin.name %>">
+            </div>
+            
+            <div class="remove-submit-container">
+                
+                <input type="hidden" id="coinId" name="coinId" value="<%= coin._id %>"> 
+                <input type="hidden" id="name" name="<%= coin.name %>" value="<%= coin.name %>">
+                <input type="hidden" id="abbreviation" name="<%= coin.abbreviation %>" value="<%= coin.abbreviation %>">
+                <div class="remove-coin-container">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <button type="submit" id="submit" name="submit" class="btn">Delete Coin</button>
+                               
+                
+
+            </div>
+            </form>  
+        </div>
+        </div>
+        
+        
+    </main>
+    </body>
+
+    <script src="/js/index.js"></script>
+    
+</html>

@@ -1,0 +1,137 @@
+
+    <%- include('./includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/auth.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    
+    <%- include('./includes/nav.ejs') %>
+    
+    <main class="landing">
+        <div class="landing-info">
+            <div class="landing-text">
+            <h1 id="logo">CRYPT KEEPER</h1>
+            <h1>Keep up with your crypto holdings.</h1>
+            <h2>Use the world's most popular crypto tracking web app.</h2>
+            </div>
+            
+            <div class="landing-signup">
+                
+                <div id="signup">
+                    <h3><a href="/#" id="sign-up">SIGN UP</a></h3>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="sign-up-form-hidden">
+            <div class="form-control-signup">
+                <div class="form-header">
+                <form method="POST">
+                    <h1>Create Account</h1>
+                </div>
+                <div class="form-input-container">
+                    <div class="form-input">
+                        <!-- <label for="email">E-Mail</label> -->
+                        <input type="email" name="email" id="email" placeholder="E-mail" onfocus="this.value=''">
+                    </div>
+                    <div class="form-input">
+                        <!-- <label for="password">Password</label> -->
+                        <input type="password" name="password" id="password" placeholder="Password" onfocus="this.value=''" >
+                    </div>
+                    <div class="form-input">
+                        <!-- <label for="confirmPassword">Confirm Password</label> -->
+                        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" onfocus="this.value=''">
+                    </div>
+                    
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <button class="btn" type="submit">SIGN UP</button>
+                    <p>Already a member? <a href="/login">Login</a></p>
+                        
+                </div>
+                </form>
+            </div>    
+        </div>
+        <video autoplay muted loop id="myVideo" class="video-background">
+            <!-- <source src="/videos/soft_blue_particles.mp4" type="video/mp4"> -->
+                <!-- <source src="/videos/orange_floats.webm" type="video/webm"> -->
+                    <!-- <source src="/videos/trading_bg.webm" type="video/webm"> -->
+                        <!-- <source src="/videos/blue_triangles1.webm" type="video/webm"> -->
+                            <source src="/videos/green_network.mp4" type="video/mp4">
+          </video>
+    </main>
+    <section class="section2">
+        <div class="section2-info">
+            <div class="card1" id="card1">
+                <div class="card1-text">
+                <h2>More than 6 million users makes Crypt Keeper the most trusted platform for staying connected to the cryptocurrency ecosystem</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                    deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="card1-img">
+                    <img src="/images/peep-network2.png">
+                </div>
+            </div>
+            <div class="card" id="card2">
+                <div class="card2-img">
+                <img src="/images/crypt-coin.png">
+                </div>
+                <div class="card2-text">
+                <h2>Over 1k of the top cryptocurrencies with realtime pricing and market information</h2>
+                <p>
+                    <BR><h4>Be the first to know about the fluctuation in the most volatile market.</h4>
+                    <BR>We don’t have to tell you the obvious - faster acknowledgements lead to smarter results. CoinStats collects crypto news from over 40 sources and brings personalised news in your feed.
+                </p>
+                <p>    
+                        <BR><h4>Our instant notifications will make you the first to know.</h4>
+                    <BR>Your crypto management armed with the latest crypto coverage.
+                </p>
+                </div>
+                    
+            </div>
+        </div>
+    </section>
+    
+    <section class="section3">
+        <div class="card3">
+            <div class="card-info">
+                <h2>The easiest way to discover, track, and manage your cryptocurrency investments</h3>
+                    <hr>
+                    <p>Stay up to date with exchange and global average pricing. Easily add and remove transactions and export your transaction log to excel or pdf formats.</p>
+            </div>
+            <div class="card-img">
+                <img id="phone" src="/images/cryptKeeperPhone.png">
+
+            </div>
+                
+        </div>
+    </section>
+    <section class="section4">
+        <!-- <div class="section4-header">
+            <h2>Our Investors</h2>
+        </div>
+        
+        <div class="investors">
+
+                <img src="/images/pantera.png">
+
+                <img src="/images/investor2.png">
+                <img src="/images/bitmex.png">
+        </div> -->
+        <div class="landing-signup" onclick="window.scrollTo(0, 0);">
+                
+            <div id="signup-bottom">
+                <h3><a href="/#" id="sign-up-bottom">SIGN UP</a></h3>
+            </div>
+        </div>
+    </section>
+
+
+
+    <%- include('./includes/footer.ejs') %> 
+    
+</body>
+
+<script src="/js/index.js"></script>
+</html>

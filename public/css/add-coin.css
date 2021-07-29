@@ -1,0 +1,229 @@
+body {
+    background-image: url('../images/gentle-swoop.jpg');
+    background-repeat: no-repeat;
+    background-size:   cover;
+
+}
+
+
+
+.add-coin-container {
+    background-color: black;
+    width: 40%;
+    margin: auto;
+    margin-top: 10%;
+    padding: 2rem 0;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 25px;
+    /* transform: translateX(25%); */
+}
+
+.coin-container-add-coin {
+    background: rgba(0,0,0,0.85);
+    width: 70%;
+    text-align: center;
+    color: white;
+    margin: auto;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: .75rem;
+    margin-top: 10%;
+    margin-bottom: 5%;
+
+}
+
+.coin-selector {
+    margin-top: 2%;
+    margin: auto;
+    display: flex;
+    width:90%;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.centered {
+    /* width: 50%; */
+    margin: auto;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+
+#coin-selection {
+
+    padding: .5rem 1rem;
+    font-size: 18px;
+    background-color: #2dc28e;
+    color: white;
+    outline: none;
+
+}
+
+.coin-add-info {
+    text-align: left;
+    margin: auto;
+    width: 90%;
+    
+
+}
+.line-item{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.line-item-delete {
+    text-align: center; 
+    display: flex;
+    /* width: 75%; */
+    margin: auto;
+    padding: 1rem 0; 
+}
+
+.line-item-delete p{
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.line-item-delete h4 {
+    padding: 0 0; 
+    text-align: center;
+}
+
+input {
+    background-color: white;
+    color:black;
+    padding: .25rem .25rem;
+    font-size: 18px;
+    width: 25%;
+    text-align: right;
+}
+
+.error {
+    margin: auto;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #49a5f5;
+    min-height: 1.3rem;
+}
+
+/* .includes{
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+} */
+
+.submit-container{
+    margin-top: 1rem;
+    display: block;
+    width: 100%;
+    align-items: middle;
+    align-content: middle;
+    justify-content: center;
+    
+    
+}
+
+.center-btn {
+    width: 100%;
+    display: flex;
+}
+
+#submit-btn.btn {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.remove-submit-container{
+    margin-top: 1rem;
+    display: block;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+}
+
+.delete-coin {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.delete-coin a{
+    color: #2dc28e;
+}
+
+.delete-coin a:hover {
+    text-decoration: underline;
+}
+
+
+
+.btn {
+    background-color: #2dc28e;
+    padding: 1rem 2rem; 
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5rem;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn:hover{
+    background-color: #49a5f5;
+}
+
+h1 {
+    color: #2dc28e;
+}
+
+
+h4 {
+   font-size: 20px; 
+}
+
+.remove-coin-container {
+    display: flex;
+    margin: auto;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+#remove-info {
+    display: hidden;
+    text-align: center;
+    font-size: 1rem;
+    color: #cecece;
+    
+}
+
+#delete-coin{
+    margin-left: 1rem;
+}
+
+@media screen and (max-width: 768px){
+    * {
+        max-width: 100%;
+    }
+
+    .add-coin-container {
+    
+        width: 85%;
+        margin: auto;
+        margin-top: 10%;
+        /* transform: translateX(25%); */
+    }
+
+    .coin-container-add-coin {
+        background: rgba(0,0,0,0.85);
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin: auto;
+        border: 1px solid rgba(255,255,255,.2);
+        border-radius: .75rem;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    
+    }
+}

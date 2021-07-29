@@ -1,0 +1,31 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/auth.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <div class="form-control-login">
+        <div class="form-header-login">
+        <form method="POST">
+            <h1>User Login</h1>
+            <div class="form-input">
+                <input type="email" name="email" id="email" placeholder="E-mail" value="">
+            </div>
+            <div class="form-input">
+                <input type="password" name="password" id="password" placeholder="Password" value="">
+            </div>
+            <% if(errorMessage) { %>
+            <div class="loginError"><%= errorMessage %></div>
+            <% } %>
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <button class="btn-login" type="submit">LOGIN</button>
+            <p><a href="/reset-password">Reset Password</a></p>
+        </div>
+        </form>
+    </div>
+    
+    <%- include('../includes/footer.ejs') %>  
+
+</body>
+<script src="/js/index.js"></script>
+</html>

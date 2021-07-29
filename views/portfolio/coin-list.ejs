@@ -1,0 +1,46 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/markets.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body> 
+    <%- include('../includes/nav.ejs') %> 
+
+    <main class="display">
+    
+    
+       <div class="coin-container-add-coin">
+           
+               <table class="coin-table">
+                   <tr>
+                       <th id="coin-name">Coins</th>
+                       <th>Price</th>
+                       <th>Market Cap</th>
+                       <th>Volume (24hr)</th>
+                       <th id="transact">Action</th>
+                   </tr>
+                   <% for (let coin of coins) { %> 
+                   <tr class="row-info">
+                       <td id="coin-name"><h3><%= coin.abbreviation %></h3>
+                           <h4 id="coinName"><%= coin.name %></h4></td>
+                       <td id="price">$</td>
+                       <td id="marketCap">$ B</td>
+                       <td id="volume">$ B</td>
+                       <td id="transact"><a href="/coin-list/add-coin/<%= coin._id %>">
+                        <div id="transact-btn">Add Coin</div></a></td>
+                   </tr>
+                   <% } %>
+   
+               </table>
+                   <h1></h1>
+                   <h2></h2>
+   
+               </div>
+            
+    </main>
+        
+   </div>
+   <%- include('../includes/footer.ejs') %>
+   </body>
+   <script src="/js/fetch-coin-list.js"></script> 
+   
+   </html>

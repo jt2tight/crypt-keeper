@@ -1,0 +1,40 @@
+{
+  "name": "crypt-keeper",
+  "version": "1.0.0",
+  "description": "Crypt Keeper App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start-server": "node app.js",
+    "start:dev": "nodemon app.js"
+  },
+  "author": "James",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "axios": "^0.21.0",
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "chart.js": "^2.9.4",
+    "compression": "^1.7.4",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^2.4.1",
+    "csurf": "^1.11.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.8.0",
+    "flash": "^1.1.0",
+    "helmet": "^4.6.0",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.10.14",
+    "nodemailer": "^6.4.16",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "save": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

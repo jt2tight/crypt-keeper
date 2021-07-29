@@ -1,0 +1,51 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/auth.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+    
+    <%- include('../includes/nav.ejs') %>
+    <main class="landing">
+    <div class="signup-box">
+    <div class="sign-up-form-display">
+        <div class="form-control-signup">
+            <div class="form-header">
+            <form method="POST">
+                <h1>Create Account</h1>
+            </div>
+            <div class="form-input-container">
+                <div class="form-input">
+                    <!-- <label for="email">E-Mail</label> -->
+                    <input type="email" name="email" id="email" placeholder="E-mail" onfocus="this.value=''">
+                </div>
+                <div class="form-input">
+                    <!-- <label for="password">Password</label> -->
+                    <input type="password" name="password" id="password" placeholder="Password" onfocus="this.value=''" >
+                </div>
+                <div class="form-input">
+                    <!-- <label for="confirmPassword">Confirm Password</label> -->
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" onfocus="this.value=''">
+                </div>
+                <div class="signupError"><% if(errorMessage) { %>
+                    <%= errorMessage %>
+                    <% } %>
+                    
+                    </div>
+                    <div class="submit-signup">
+                
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <button class="btn" type="submit">SIGN UP</button>
+                <p>Already a member? <a href="/login">Login</a></p>
+    </div>
+            </div>
+            </form>
+        </div>    
+    </div>
+    </div>
+
+</main>
+    
+</body>
+<script src="/js/index.js"></script>
+</html>

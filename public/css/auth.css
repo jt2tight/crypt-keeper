@@ -1,0 +1,270 @@
+.form-control {
+    width: 50%;
+    height: 50vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    font-family: 'Varela', sans-serif;
+    
+    /* align-content: center; */ 
+    /* background-color: white; */
+}
+
+.loginError {
+    min-height: 1.5rem;
+    margin-top: 1rem;
+    align-items: center;
+    color:  rgb(224, 151, 151);
+    
+}
+
+.signup-box {
+    width: 100%;
+    margin-top: 9%;
+    transform: translateY(75%);
+
+}
+
+.submit-signup {
+    text-align: center;
+}
+
+.signupError {
+    min-height: 1.5rem;
+    margin-top: 1rem;
+    align-items: center;
+    color: rgb(224, 151, 151);
+    text-align: center;
+    
+}
+
+.form-control-login {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    font-family: 'Varela', sans-serif;
+    background-image: url('/images/green-nebula2.jpg');
+    /* align-content: center; */ 
+    /* background-color: white; */
+}
+
+.form-header-login {
+    width: auto;
+    padding: 1rem 1rem;
+    /* border: 3px solid black; 
+    border-radius: 10px; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10%;
+    /* background-color: rgba(0,0,0,.75); */
+    text-align: center;
+}
+
+.form-header-login form{
+    width: 90%;
+    margin: auto;
+}
+
+.form-control-login h1 {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn-login {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 15px 45px;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    background: #45d1a0;
+    color: white;
+    display: block;
+
+}
+.btn-login:hover {
+    background:#202020;
+    color:white;
+
+}
+
+.signup-page {
+    background-image: url('/images/green-nebula2.jpg');
+    margin-top: 0%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.form-control-signup {
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    align-items: center;
+    align-content: center;
+    font-family: 'Varela', sans-serif;
+    
+    /* align-content: center; */ 
+    /* background-color: black; */
+
+}
+
+.form-control-signup-page {
+    width: 35%;
+    padding: 5rem 0;
+    background-color: rgba(0,0,0,.75);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    align-items: center;
+    align-content: center;
+    font-family: 'Varela', sans-serif;
+
+}
+
+.form-control-signup-page h4 {
+        color: #49a5f5;
+        margin-bottom: 1rem;
+        
+
+}
+
+h1 {
+    margin-top: 2rem;
+}
+
+#select {
+    width: 20%;
+    padding: 5px 10px;
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+}
+
+
+.form-header {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: -10%; */
+    /* background-color: darkblue; */
+    text-align: center;
+}
+
+.form-header h1{
+    padding-bottom: 3rem;
+}
+
+.form-input-container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    /* background-color: blue; */
+
+}
+
+.form-input-container p{
+    margin-top: 2rem;
+}
+
+.form-input {
+    margin: auto;
+    padding: .65rem 0; 
+    font-size: 18px;
+    text-align: left;
+    line-height: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-input input {
+    width: 500px;
+    font-size: 18px;
+    padding: 5px 5px;
+    margin-top: .5rem;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 15px 45px;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    background:#45d1a0;
+    color: white;
+    display: block;
+
+}
+.btn:hover {
+    background:#202020;
+    color: white;
+
+}
+
+input {
+    /* margin-left: 3rem; */
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    background: none;
+    width: 1000px;
+    border-bottom-color:white;
+    border-bottom-width: .15rem;
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    color: white;
+    display: block;
+    margin: auto;
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    background-color: rgba(0,0,0,0);
+    -webkit-text-fill-color:white;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+  }
+
+  @media screen and (max-width: 1280px){
+
+    .form-control-signup {
+        width: 100%;
+    }
+
+    #select {
+        width: 50%;
+        padding: 5px 10px;
+        margin-top: 1.5rem;
+        font-size: 1.25rem;
+    }
+}
+
+  @media screen and (max-width: 768px){
+  .form-control-signup {
+      width: 100%;
+  }
+
+}

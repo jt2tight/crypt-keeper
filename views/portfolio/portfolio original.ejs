@@ -1,0 +1,73 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/portfolio.css">
+</head>
+<body> 
+    <%- include('../includes/nav.ejs') %> 
+ 
+    <main class="display">
+     <div class="sub-nav">
+         <ul>
+             <li><a href="#">Balances</a></li>
+             <li><a href="#">Allocations</a></li>
+             <li><a href="#">Transaction History</a></li>
+         </ul>
+     </div>
+     <div class="account-balance-container">
+         <div id="account-balance">
+             <ul>
+                <li><h3>Account Balance</h3></li>
+                <li><h1>$37,489.76</h1></li>
+
+             </ul> 
+            </div>
+            
+        <div id="add-coin">
+            <h3><a href="portfolio/coin-list">Add Coin</a></h3>
+        </div>
+     </div>   
+    <div class="coin-container">
+        
+            <table class="coin-table">
+                <tr>
+                    <th id="coin-name">Coins</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Balance</th>
+                    <th id="transact">Action</th>
+                </tr>
+                <% if(typeof(coins) !="undefined") { %>
+                <% for (let i = 0; i < user.portfolio.items.length; i++) { %>
+
+                <tr class="row-info">
+                    <td id="coin-name"><h3><%= userCoin[i].name %></h3>
+                        <h4><%= userCoin[i].abbreviation %></h4></td>
+                    <td>$
+                        <% for(let e=0; e < coins.length; e++) { %> 
+                        <% if (coins[e].name === userCoin[i].name) { %>
+                            <%= coins[e].price %>                                                         
+                            <% } %>                                                        
+                            <% } %>
+                     </td>
+                    <td><%= userCoin[i].quantity %></td>
+                    <td>$
+                        <% for(let e=0; e < coins.length; e++) { %> 
+                            <% if (coins[e].name === userCoin[i].name) { %>  
+                                <%= Math.floor(userCoin[i].quantity * coins[e].price) %>                                                         
+                                <% } %>                                
+                                <% } %>
+                        </td>
+                    <td id="transact"><div id="transact-btn">Add/Remove</div></td>
+                </tr>
+                <% } %>
+                <% } %>
+            </table>
+                <h1></h1>
+                <h2></h2>
+
+            </div>
+ </main>
+     
+</div>
+
+</body>
+</html>

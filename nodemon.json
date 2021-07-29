@@ -1,0 +1,8 @@
+{
+    "env":{
+        "MONGO_USER":"james",
+        "MONGO_PASSWORD": "buttcorn",
+        "MONGO_DEFAULT_DATABASE": "cryptkeeper",
+        "CONNECTION_STRING": "mongodb+srv://james:buttcorn@cluster0.quucn.mongodb.net/cryptkeeper"
+    }
+}

@@ -1,0 +1,39 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/markets.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/fetch-coin-data.js"></script>
+</head>
+<body> 
+    <%- include('../includes/nav.ejs') %> 
+    <main class="display">
+    <div class="coin-container">
+        
+            <table class="coin-table">
+                <tr>
+                    <th id="coin-name">Coins</th>
+                    <th>Price</th>
+                    <th>Market Cap</th>
+                    <th id="volume">Volume (24hr)</th>
+                </tr>
+                <% for (let coin of coins) { %> 
+                <tr class="row-info">
+                    <td id="coin-name"><h3><%= coin.abbreviation %></h3>
+                        <h4><%= coin.name %></h4></td>
+                    <td>$<%= coin.price %></td>
+                    <td>$<%= coin.marketCap %>B</td>
+                    <td id="volume">$<%= coin.dailyVolume %>B</td>
+                </tr>
+                <% } %>
+
+
+            </table>
+                <h1></h1>
+                <h2></h2>
+
+            </div>
+ </main>
+     
+</div>
+
+</body>
+</html>

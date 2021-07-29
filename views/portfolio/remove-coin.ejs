@@ -1,0 +1,43 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/portfolio.css">
+<link rel="stylesheet" href="/css/add-coin.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body> 
+    <%- include('../includes/nav.ejs') %> 
+    <main class="display">
+        <div class="add-coin-container">
+            <div class="centered"><h1>Remove Coin</h1></div>
+
+            <div class="coin-add-info">
+            <form method="POST">
+            <div class="line-item"><h3>Coin</h3>
+                <h4 id="coin-name-display"><%= coin.name %></h4>
+                <input type="hidden" name="name" value="<%= coin.name %>">
+            </div>
+            <div class="line-item" ><h3>Sell Price ($)</h3>
+                <input type="number" id="price" name="price" step=".01"></div>
+            <div class="line-item"><h3>Quantity</h3>
+                <input type="number" id="quantity" name="quantity" step="any"></div>
+            <div class="line-item"><h3>Date</h3>
+                <input type="date" id="date" name="date"></div>
+            <div class="line-item"><h3>Total</h3>
+                <h4 id="quantity-total">$ 0</h4></div>
+            <div class="remove-submit-container">
+                
+                <%- include('../includes/remove-coin-submit.ejs', {coin: coin}) %> 
+                
+                
+
+            </div>
+            </form>  
+        </div>
+        </div>
+        
+        
+    </main>
+    </body>
+
+    <script src="/js/add-coin.js"></script>
+    
+</html>
